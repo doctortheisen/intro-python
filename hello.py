@@ -1,2 +1,2 @@
-msg = "Checking GitHub Workflow..."
+msg = "checking gitHub workflow..."
 print(msg)
