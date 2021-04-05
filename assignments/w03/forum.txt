@@ -1,0 +1,78 @@
+Functions
+
+In programming, a function is a named code chunk that performs an operation. That could be a series of strings that print out a beautiful design. It could involve an operation using local variables and inputs. 
+
+Best Practices with Functions
+	
+	In my experience, good functions can be reused for other programs. Bad functions are idiosyncratic to a single program and can't be reused easily without the author using copy/paste to put them in a separate program.
+
+Functions for Strings and Lists
+
+It seems like every student has referenced print() for strings. Did you know python automatically knows how to count each character in the string position forward and backward?
+
+Example code:
+
+preference = "coconut"
+print(preference)
+print(preference[6])
+print(preference[-1])
+
+Output:
+
+coconut
+t
+t
+
+Analysis:
+
+	The program indexes the string characters just as many programming languages do. I have never seen a language that automatically indexes backward. I think that's really cool!
+
+
+
+Lists of Categorical Data:
+
+I work in psychology and there are many surveys involving answers such as:
+
+Strongly Disagree
+Disagree
+Neither Agree nor Disagree
+Agree
+Strongly Agree
+
+We need some kind of function library to work with strings and lists at the same time. 
+
+I know how to do this in R using a built-in function called "factors". Most of my coworkers know about R's built-in factor functions. R will spit out a list of responses from everyone's answers to that question as a vector. At the end of the vector, it shows the list of responses received. This is really important for our analysis. It's one of the reasons we use R instead of something simpler.
+
+In doing this assignment, I came across a code library that makes python act like R for factors. One of the specialty tricks we use in my team is specifying the "levels" in an R factor. If you look at the example below, you'll see how it can be done in python. I'm so excited about this function! If I can figure out a few more twists to this function, it is something I can use weekly. It is the big thing stopping me from using python instead of R for data analysis. 
+
+Python has a growing library for data analysis called numpy.
+It has another library of functions called pandas.
+
+I've written some code below that shows how to install both and create a python-version of an R factor.
+
+URL:
+
+http://pandas-docs.github.io/pandas-docs-travis/user_guide/categorical.html
+
+
+Example of Specifying Levels with a Series Function (String and List): 
+
+# Prerequisite: install Anaconda
+pip install numpy
+pip install pandas
+
+In [1]: responses = pd.Series(["Strongly Disagree", "Disagree", "Neither Agree nor Disagree", "Agree", "Strongly Disagree"], dtype="category")
+
+In [2]: responses
+Out[2]: 
+0    Strongly Disagree
+1    Disagree
+2    Neither Agree nor Disagree
+3    Agree
+4    Strongly Disagree
+dtype: category
+Categories (4, object): [Strongly Disagree, Disagree, Neither Agree nor Disagree, Agree]
+
+
+
+
