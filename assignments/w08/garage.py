@@ -17,44 +17,92 @@ class Vehicle:
         self.fuelType = fuelType
         self.options = options
 
-    def getVehicleAttributes(self):
-        """Print vehicle attributes"""
-        printed_vehicle_attributes = f"{self.make} {self.model} {self.color} {self.fuelType} {self.options}"
-        return printed_vehicle_attributes.title()
+    def getMake(self):
+        """Return vehicle make"""
+        return self.make
+#        """Use code below to capitalize first letter"
+#        make = f"{self.make}"
+#        return make.title()
+    
+    def getModel(self):
+        """Return vehicle model"""
+        return self.model
+    
+    def getColor(self):
+        """Return vehicle color"""
+        return self.color
+
+    def getFuelType(self):
+        """Return vehicle fuelType"""
+        return self.fuelType
+
+    def getOptions(self):
+        """Return vehicle options"""
+        return self.options
+
+
+#   Use code below to return a combination of attributes
+#     def getVehicleAttributes(self):
+#        """Print vehicle attributes"""
+#        printed_vehicle_attributes = f"{self.make} {self.model} {self.color} {self.fuelType} {self.options}"
+#        return printed_vehicle_attributes.title()
 
 # Create a Car class as a child of the Vehicle class with the attributes and functions detailed in the class diagram. - 10%
-    def Car(self, engineSize, numDoors):
-        """Attributes of car"""
+class Car(Vehicle):
+    """Represent vehicle aspects specific to a car"""
+
+    def __init__(self, make, model, color, fuelType, options, engineSize, numDoors):
+        """Initialize attributes of parent class (vehicle), then car"""
+
+        super().__init__(make, model, color, fuelType, options)
         self.engineSize = engineSize
         self.numDoors = numDoors
         
     def getEngineSize(self):
         """Return the engine size"""
-        printed_engine_size = f"{self.engineSize}"
-        return printed_engine_size.title()
+        #printed_engine_size = f"{self.engineSize}"
+        #return printed_engine_size.title()
+        return self.engineSize
     
     def getNumDoors(self):
         """Return number of car doors"""
-        printed_num_doors = f"{self.numDoors}"
-        return printed_num_doors.title()
+        #printed_num_doors = f"{self.numDoors}"
+        #return printed_num_doors.title()
+        return self.numDoors
 
 # Create a Pickup class as a child of the Vehicle class with the attributes and functions detailed in the class diagram. - 10%
-    def truck(self, cabStyle, bedLength):
+class Truck(Vehicle):
+    """Represent vehicle aspects specific to a truck"""
+
+    def __init__(self, make, model, color, fuelType, options, cabStyle, bedLength):
+        """Initialize attributes of parent class (vehicle), then truck"""
+
+        super().__init__(make, model, color, fuelType, options)
         self.cabStyle = cabStyle
         self.bedLength = bedLength
     
     def getCabStyle(self):
         """Return cab style"""
-        printed_cab_style = f"{self.cabStyle}"
-        return printed_cab_style.title()
+        #printed_cab_style = f"{self.cabStyle}"
+        #return printed_cab_style.title()
+        return self.cabStyle
 
     def getBedLength(self):
         """Return bed length"""
-        printed_bed_length = f"{self.bedLength}"
-        return printed_bed_length.title()
+        #printed_bed_length = f"{self.bedLength}"
+        #return printed_bed_length.title()
+        return self.bedLength
 
-new_vehicle = Vehicle('toyota', 'tacoma', 'green', 'unleaded', 'power mirrors')
-print(new_vehicle.getVehicleAttributes())
+
+# Car test
+new_car = Car('toyota', 'camry', 'gray', 'unleaded', 'moonroof', '4-cylinder', 4)
+print(new_car.getMake(), new_car.getModel(), new_car.getColor(), new_car.getFuelType(), new_car.getOptions())
+#print(new_car.getVehicleAttributes(), new_car.getEngineSize(), new_car.getNumDoors())
+#
+# Truck test
+#new_truck = Truck('toyota', 'tacoma', 'green', 'unleaded', 'power mirrors', 'supercab', 'short')
+#print(new_truck.getVehicleAttributes(), new_truck.getCabStyle(), new_truck.getBedLength())
+
 # 2. Demonstrate usage of previously studied programming constructs (functions, conditionals, loops)  - 60%
 # Using a function, display a menu prompting the user to add a Car or a Pickup to their virtual garage. - 15%
 # 
