@@ -20,9 +20,6 @@ class Vehicle:
     def getMake(self):
         """Return vehicle make"""
         return self.make
-#        """Use code below to capitalize first letter"
-#        make = f"{self.make}"
-#        return make.title()
     
     def getModel(self):
         """Return vehicle model"""
@@ -39,13 +36,6 @@ class Vehicle:
     def getOptions(self):
         """Return vehicle options"""
         return self.options
-
-
-#   Use code below to return a combination of attributes
-#     def getVehicleAttributes(self):
-#        """Print vehicle attributes"""
-#        printed_vehicle_attributes = f"{self.make} {self.model} {self.color} {self.fuelType} {self.options}"
-#        return printed_vehicle_attributes.title()
 
 # Create a Car class as a child of the Vehicle class with the attributes and functions detailed in the class diagram. - 10%
 class Car(Vehicle):
@@ -95,8 +85,8 @@ class Truck(Vehicle):
 
 
 # Car test
-new_car = Car('toyota', 'camry', 'gray', 'unleaded', 'moonroof', '4-cylinder', 4)
-print(new_car.getMake(), new_car.getModel(), new_car.getColor(), new_car.getFuelType(), new_car.getOptions())
+#new_car = Car('toyota', 'camry', 'gray', 'unleaded', options_list[0].options, '4-cylinder', 4)
+#print(new_car.getMake(), new_car.getModel(), new_car.getColor(), new_car.getFuelType(), new_car.getOptions())
 #print(new_car.getVehicleAttributes(), new_car.getEngineSize(), new_car.getNumDoors())
 #
 # Truck test
@@ -111,6 +101,12 @@ print(new_car.getMake(), new_car.getModel(), new_car.getColor(), new_car.getFuel
 # Your program will prompt the user to define the attributes of the vehicles in their garage. - 10%
 # 
 # The options attribute will be defined as a python list chosen by the user when presented with a menu of programmer chosen vehicle options that can apply to both cars # and pickup trucks (i.e. power mirrors, power locks, remote start, backup camera, bluetooth, cruise control, etc) - 20%
-#
+# 
+list = []
+list.append( Vehicle.options('airbags'))
+#print(new_car.options[0])
+#print(list[0].options)
+    #options_list = ['airbags', 'bluetooth', 'cooler', 'dustcover', 'exhaust kit', 'flame stickers', 'grill customization', 'heated seats']
+
 # 3. When the user has finished adding and defining vehicles for their garage the program will output the vehicles with their accompanying attributes and options as specified by the user. -10 %
 #
