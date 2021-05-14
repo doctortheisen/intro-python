@@ -25,7 +25,7 @@ def add_vehicle_menu():
                 input('Fuel Type? '),
                 input('Options? '),
                 input('Engine Size? '),
-                input('Number of Doors? '))
+                input('Number of Doors? '))            
             # How do i store the new_car instance to a list?
             # How do I print from that list?
 #        print(
@@ -37,12 +37,13 @@ def add_vehicle_menu():
 #            '\n: Options: ', new_car.getOptions(),
 #            '\n: Engine Size: ', new_car.getEngineSize(),
 #            '\n: Number of Doors: ', new_car.getNumDoors()
-
-#           cars = [ Car( make, model, color, fuelType, options, engineSize, numDoors ) for make, model, color, fuelType, options, engineSize, numDoors in new_car ]
+# Print the Car
+            print(new_car.getMake(), new_car.getModel(), new_car.getColor(), new_car.getFuelType(), new_car.getOptions())
             num_cars = num_cars + 1
             print(num_cars, 'car(s) in garage.\n')
+
         elif new_vehicle == 'truck':
-            new_truck = Car(
+            new_truck = Truck(
                 input('Make? '),
                 input('Model? '),
                 input('Color? '),
@@ -51,9 +52,13 @@ def add_vehicle_menu():
                 input('Cab Style? '),
                 input('Bed Length? '))
             num_trucks = num_trucks + 1
+# Print the Truck
+            print(new_truck.getMake(), new_truck.getModel(), new_truck.getColor(), new_truck.getFuelType(), new_truck.getOptions())
             print(num_trucks, 'truck(s) in garage.\n')
+
         else:
             print("Please check entry for typo: ", new_vehicle)
+
     return num_cars, num_trucks
     
 # call function and store product
@@ -83,3 +88,4 @@ if num_trucks == 0:
     #options_list = ['airbags', 'bluetooth', 'cooler', 'dustcover', 'exhaust kit', 'flame stickers', 'grill customization', 'heated seats']
 
 # 3. When the user has finished adding and defining vehicles for their garage the program will output the vehicles with their accompanying attributes and options as specified by the user. -10 %
+

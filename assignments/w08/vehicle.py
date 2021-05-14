@@ -54,6 +54,12 @@ class Car(Vehicle):
         """Return number of car doors"""
         return self.numDoors
 
+#    def display(self):
+#       print getMake(self)
+#		print('{make} {model} {color} {fuelType} {options}'
+#				 .format(make= self.make, model=round(self.model(), color= self.color, rate= round(self.rate, 5), time_period= self.time_period))
+
+
 # Create a Pickup class as a child of the Vehicle class with the attributes and functions detailed in the class diagram. - 10%
 class Truck(Vehicle):
     """Represent vehicle aspects specific to a truck"""
